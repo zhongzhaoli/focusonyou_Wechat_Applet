@@ -1,0 +1,9 @@
+<!--index.wxml-->
+<text class="userinfo-nickname">{{userInfo.nickName}}</text>
+
+
+<view class="login_view" wx:if="{{!hasUserInfo && canIUse}}">
+  <view class="login_bg"></view>
+  <button class="login_btn" open-type="getUserInfo" bindgetuserinfo="getUserInfo">微信授权</button>
+</view>
+<view></view>
