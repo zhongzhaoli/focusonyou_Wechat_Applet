@@ -1,12 +1,15 @@
 //index.js
 //获取应用实例
 const app = getApp()
+//loading工具
+const loading = require('../../utils/loading.js');
 
 Page({
   data: {
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
+    loading: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
   //事件处理函数
