@@ -38,3 +38,12 @@ page{
   background-image: url('http://111.231.242.150:85/loading_2.gif');
   background-size:cover;
 }
+.user_view{
+  padding: 5rpx 20rpx;
+}
+.user_img{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
