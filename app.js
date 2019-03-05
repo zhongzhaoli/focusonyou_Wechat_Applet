@@ -30,6 +30,11 @@ App({
             }
           })
         }
+        else{
+          if (this.userInfoReadyCallback) {
+            this.userInfoReadyCallback("error")
+          }
+        }
       }
     })
   },
