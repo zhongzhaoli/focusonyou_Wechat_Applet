@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 const urls = "http://122.152.249.114/focusonyou/public";
+=======
+const urls = "https://api.yuntunwj.com/focusonyou/public";
+>>>>>>> f78dfd78edaf1b69148018f7ff94e249fe5e8462
 const ajax = (obj) => {
   wx.request({
     url: urls + obj.url,
