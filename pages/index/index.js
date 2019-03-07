@@ -36,6 +36,9 @@ Page({
     } else if (this.data.canIUse){
       // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
       // 所以此处加入 callback 以防止这种情况
+      this.setData({
+        loading: false
+      })
       app.userInfoReadyCallback = res => {
         if(res === "error"){
           this.setData({
@@ -53,6 +56,9 @@ Page({
         }
       }
     } else {
+      this.setData({
+        loading: false
+      });      
     }
   },
   getUserInfo: function(e) {
@@ -61,10 +67,14 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true,
       login_bg: false,
-      loading: true,
+      loading: false,
     })
+    this.get_habit();
   },
   get_habit(){
+    this.setData({
+      loading: true
+    })
     let that = this;
     api.ajax({
       url: '/plan/' + wx.getStorageSync('user').openid,
@@ -72,7 +82,8 @@ Page({
       data: {},
       succ_fun: function(mes){
         that.setData({
-          plan: mes.data
+          plan: mes.data,
+          loading: false,
         });
       }
     })
