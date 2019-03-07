@@ -1,4 +1,4 @@
-const urls = "http://10.1.53.149:7899/";
+const urls = "http://122.152.249.114/focusonyou/public";
 const ajax = (obj) => {
   wx.request({
     url: urls + obj.url,
