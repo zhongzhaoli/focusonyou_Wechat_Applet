@@ -4,10 +4,13 @@
     加载中...
 </loading>
 
-<view style="color:black;" wx:text="{{ openid }}">
-
-</view>
 <view class="login_view" wx:if="{{ login_bg }}">
   <view class="login_bg"></view>
   <button class="login_btn" open-type="getUserInfo" bindgetuserinfo="getUserInfo">微信授权</button>
+</view>
+
+<view class="plan_div">
+  <view class="plan" wx:for="{{ plan }}" wx:key="idx">
+    <view>{{ item.text }}</view>
+  </view>
 </view>

@@ -54,3 +54,11 @@ page{
 .user_view{
   display: flex;
 }
+.plan_div{
+  padding: 40rpx;
+}
+.plan{
+  background: #eaeaea;
+  padding: 20rpx 30rpx;
+  border-radius: 4px;
+}

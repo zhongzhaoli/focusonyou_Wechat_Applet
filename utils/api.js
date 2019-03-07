@@ -4,8 +4,9 @@ const ajax = (obj) => {
     url: urls + obj.url,
     method: obj.method,
     data: obj.data,
-    success: obj.succ_fun,
-    fail: obj.err_fun
+    success: function(mes){
+      obj.succ_fun(mes);
+    },
   })
 }
 

@@ -14,6 +14,7 @@ Page({
     loading: true,
     login_bg: true,
     openid: "",
+    plan: [],
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
   //事件处理函数
@@ -24,7 +25,6 @@ Page({
   },
   onLoad: function () {
     this.openid = wx.getStorageSync('user');
-    console.log(this.openid);
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -65,15 +65,15 @@ Page({
     })
   },
   get_habit(){
+    let that = this;
     api.ajax({
       url: '/plan/' + wx.getStorageSync('user').openid,
       method: 'GET',
       data: {},
-      success: function(mes){
-        console.log(mes);
-      },
-      fail: function(mes){
-        console.log("error");
+      succ_fun: function(mes){
+        that.setData({
+          plan: mes.data
+        });
       }
     })
   }
