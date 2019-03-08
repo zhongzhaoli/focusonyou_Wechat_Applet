@@ -20,7 +20,7 @@
 </view>
 
 <view class="plan_div">
-  <view class="plan {{ item.bg }}" wx:for="{{ plan }}" wx:key="idx">
+  <view class="plan {{ item.bg }}" wx:for="{{ plan }}" wx:key="idx" bindtouchstart="plan_touch" bindtouchmove="plan_more">
     <view class="mb">
       <view class="plan_text">{{ item.text }}</view>
       <view class="plan_create_time">{{ item.create_time }}</view>
