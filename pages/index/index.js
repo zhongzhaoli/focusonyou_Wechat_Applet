@@ -16,6 +16,8 @@ Page({
     openid: "",
     plan: [],
     date: "",
+    move: {},
+    touch: {},
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
   //事件处理函数
@@ -87,6 +89,22 @@ Page({
           loading: false,
         });
       }
+    })
+  },
+  plan_touch: function(e){
+    let touch = {
+      left: e.touches[0].clientX
+    }
+    this.setData({
+      touch: touch
+    })
+  },
+  plan_more: function(e){
+    let move = {
+      left: e.touches[0].clientX
+    }
+    this.setData({
+      move: move
     })
   }
 })
