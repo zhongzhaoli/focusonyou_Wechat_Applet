@@ -14,8 +14,9 @@ App({
       success: res => {
         if(res.code){
           wx.request({
-            url: 'https://api.weixin.qq.com/sns/jscode2session?appid=' + that.appid + '&secret=' + that.secret + '&js_code=' + res.code + '&grant_type=authorization_code',
-            method: 'GET',
+            url: 'https://api.yuntunwj.com/focusonyou/public/wechat',
+            data: {'code': res.code, 'appid': that.appid, 'secret': that.secret},
+            method: 'POST',
             success: function(res){
               var obj = {};
               obj.openid = res.data.openid;
