@@ -132,3 +132,21 @@ page{
   background-image: url('http://focus.yuntunwj.com/audio/dj4.jpg');
   background-size: cover;
 }
+.ju-center{
+  justify-content: center;
+}
+.d-flex{
+  display: flex;
+}
+.add-plan{
+  position: fixed;
+  right: 20rpx;
+  bottom: 20rpx;
+  height: 100rpx;
+  width: 100rpx;
+  background: pink;
+  color: white;
+  border-radius: 50%;
+  font-size: 60rpx;
+  line-height: 90rpx;
+}
