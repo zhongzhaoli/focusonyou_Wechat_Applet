@@ -5,8 +5,8 @@ const ajax = (obj) => {
     method: obj.method,
     data: obj.data,
     success: function(mes){
-      obj.succ_fun(mes);
-    },
+      obj.success(mes);
+    }
   })
 }
 

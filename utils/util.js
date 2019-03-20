@@ -13,8 +13,13 @@ const formatNumber = n => {
   n = n.toString()
   return n[1] ? n : '0' + n
 }
+const redirct = n => {
+  wx.navigateTo({
+    url: "/pages/" + n + "/" + n,
+  })
+}
 
 module.exports = {
   formatTime: formatTime,
+  redirct: redirct
 }
-

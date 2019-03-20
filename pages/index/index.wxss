@@ -35,6 +35,16 @@ page{
 .user_view{
   padding: 5rpx 20rpx;
 }
+.no_message{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  letter-spacing: 7rpx;
+  font-size: 40rpx;
+  font-weight: bold;
+  text-align: center;
+}
 .user_img{
   width: 70rpx;
   height: 70rpx;

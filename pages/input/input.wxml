@@ -1,0 +1,10 @@
+<!--index.wxml-->
+
+<loading wx:if="{{ loading }}">
+    加载中...
+</loading>
+
+<view class="input_div">
+  <textarea placeholder='今天要完成什么大事？'bindinput="adInputChange" value=""></textarea>
+  <button bindtap='save_plan'>提交</button>
+</view>

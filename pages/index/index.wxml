@@ -1,7 +1,7 @@
 <!--index.wxml-->
 
 <loading wx:if="{{ loading }}">
-    加载中...
+  加载中...
 </loading>
 
 <view class="login_view" wx:if="{{ login_bg }}">
@@ -9,24 +9,29 @@
   <button class="login_btn" open-type="getUserInfo" bindgetuserinfo="getUserInfo">微信授权</button>
 </view>
 
-<view class="header">
+<view class="header" wx:if="{{ !login_bg }}">
   <view>
     <view class="date">{{ date }}</view>
     <view class="today">Today</view>
   </view>
   <view class="user_img">
-      <image src="{{ userInfo.avatarUrl }}"></image>
+    <image src="{{ userInfo.avatarUrl }}"></image>
   </view>
 </view>
 
-<view class="plan_div">
-  <view class="plan {{ item.bg }}" wx:for="{{ plan }}" wx:key="idx" bindtouchstart="plan_touch" bindtouchmove="plan_more">
+<view class="plan_div" wx:if="{{ !login_bg }}">
+  <view class="plan bg2 " wx:if="{{ !plan.length }}" bindtap='redircts' data-href="input">
+    <view class="mb no_message">
+      <view>开始制定今天的计划</view>
+    </view>
+  </view>
+  <view class="plan {{ item.bg }}" wx:for="{{ plan }}" wx:key="idx">
     <view class="mb">
       <view class="plan_text">{{ item.text }}</view>
       <view class="plan_create_time">{{ item.create_time }}</view>
     </view>
   </view>
 </view>
-<view class="d-flex ju-center add-plan">
+<view class="d-flex ju-center add-plan" wx:if="{{ !login_bg }}" bindtap='redircts' data-href="input">
   <view>+</view>
 </view>

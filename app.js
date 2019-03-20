@@ -13,16 +13,9 @@ App({
     wx.login({
       success: res => {
         if(res.code){
-          wx.request({
-            url: 'https://api.yuntunwj.com/focusonyou/public/wechat',
-            data: {'code': res.code, 'appid': that.appid, 'secret': that.secret},
-            method: 'POST',
-            success: function(res){
-              var obj = {};
-              obj.openid = res.data.openid;
-              wx.setStorageSync('user', obj);//存储openid
-            }
-          })
+          wx.setStorageSync('code', res.code);//存储openid
+          wx.setStorageSync('appid', this.appid);//存储openid
+          wx.setStorageSync('secret', this.secret);//存储openid
         }
         else{
           console.log("获取用户信息失败");
