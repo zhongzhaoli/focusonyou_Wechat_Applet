@@ -108,13 +108,18 @@ page{
   font-weight: bold;
 }
 .plan_text{
-  padding: 40rpx;
   color: white;
   letter-spacing: 7rpx;
   font-size: 40rpx;
   line-height: 70rpx;
   font-weight: bold;
   text-align: center;
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin: 40rpx;
 }
 .plan_create_time{
   position: absolute;
