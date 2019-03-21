@@ -1,4 +1,5 @@
 const urls = "https://api.yuntunwj.com/focusonyou/public";
+// const urls = "http://localhost:7888";
 const ajax = (obj) => {
   wx.request({
     url: urls + obj.url,

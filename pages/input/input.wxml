@@ -1,10 +1,27 @@
 <!--index.wxml-->
 
 <loading wx:if="{{ loading }}">
-    加载中...
+  加载中...
 </loading>
 
 <view class="input_div">
-  <textarea placeholder='今天要完成什么大事？'bindinput="adInputChange" value=""></textarea>
-  <button bindtap='save_plan'>提交</button>
+  <view class="form-control">
+    <label>我的专注目标</label>
+    <input type="text" placeholder='看完一本三体' value="{{ content }}" maxlength='10' bindinput='adInputChange'>
+    <view>({{ input_num }}/10)</view>
+    </input>
+  </view>
+  <view class="form-control">
+    <label>给自己的鼓励</label>
+    <textarea value="{{ encourage }}" placeholder='加油鸭！！！！！！' bindinput='adtextareaChange'></textarea>
+  </view>
+  <view class="form-control">
+    <label>预计开始时间</label>
+    <picker mode="time" value="{{ time }}" start="{{ start_time }}" end="{{ end_time }}" bindchange="bindTimeChange">
+      <view>{{ time_hour }}</view>
+      <view>:</view>
+      <view>{{ time_min }}</view>
+    </picker>
+  </view>
+  <button bindtap='save_plan' class="save_plan">提交</button>
 </view>

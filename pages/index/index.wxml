@@ -28,10 +28,11 @@
   <view class="plan {{ item.bg }}" wx:for="{{ plan }}" wx:key="idx">
     <view class="mb">
       <view class="plan_text">{{ item.text }}</view>
-      <view class="plan_create_time">{{ item.create_time }}</view>
     </view>
   </view>
 </view>
-<view class="d-flex ju-center add-plan" wx:if="{{ !login_bg }}" bindtap='redircts' data-href="input">
-  <view>+</view>
+<view style="height: 150rpx; width: 100%;"></view>
+<view class="d-flex index_bottom_btn_div fixed_bottom" wx:if="{{ !login_bg }}">
+  <button class="btn-large btn-class2 flex-1 mr-1" bindtap='redircts' data-href="input">定制计划</button>
+  <button class="btn-large btn-class1 flex-1 ml-1">早睡打卡</button>
 </view>
