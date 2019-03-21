@@ -25,10 +25,17 @@
       <view>开始制定今天的计划</view>
     </view>
   </view>
-  <view class="plan {{ item.bg }}" wx:for="{{ plan }}" wx:key="idx">
+  <!-- <view class="plan {{ item.bg }}" wx:for="{{ plan }}" wx:key="idx">
     <view class="mb">
       <view class="plan_text">{{ item.text }}</view>
     </view>
+  </view> -->
+  <view class="plans d-flex ju-between ali-center" wx:for="{{ plan }}" wx:key="idx">
+    <view class="plan_text">
+      <view class="plan_title">{{ item.text }}</view>
+      <view class="start_time">预计开始时间：{{ item.start_time }}</view>
+    </view>
+    <image src="http://focus.yuntunwj.com/audio/plan_start.png"></image>
   </view>
 </view>
 <view style="height: 150rpx; width: 100%;"></view>
