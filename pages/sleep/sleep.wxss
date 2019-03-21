@@ -1,0 +1,28 @@
+page {
+  height: 100%;
+}
+
+.my_sleep {
+  padding: 20rpx 0;
+}
+
+.day_text {
+  font-size: 35rpx;
+}
+
+.my_sleep .flex-1:not(:last-child) {
+  border-right: 1px #f0f0f0 solid;
+}
+
+.day_num {
+  color: #ffc107;
+  font-size: 40rpx;
+  padding-top: 20rpx;
+}
+
+.sleep_text{
+  font-size: 30rpx;
+  color: #777;
+  line-height: 60rpx;
+  letter-spacing: 5rpx;
+}

@@ -1,18 +1,21 @@
-page{
+page {
   height: 100%;
 }
-.save_plan{
+
+.save_plan {
   text-align: center;
   position: absolute;
   bottom: 2rem;
   width: calc(100% - 100rpx);
 }
-.input_div{
-  padding:0 50rpx;
+
+.input_div {
+  padding: 0 50rpx;
   height: 100%;
   position: relative;
 }
-.input_div textarea{
+
+.input_div textarea {
   width: calc(100% - 60rpx);
   margin-top: 50rpx;
   border: 1px #eaeaea solid;
@@ -20,19 +23,23 @@ page{
   border-radius: 10px;
   padding: 30rpx;
 }
-.input_div button{
-  margin-top:40rpx;
+
+.input_div button {
+  margin-top: 40rpx;
   font-size: 30rpx;
 }
-.form-control{
+
+.form-control {
   margin-bottom: 1rem;
 }
-.form-control label{
+
+.form-control label {
   font-size: 30rpx;
 }
-.form-control input{
+
+.form-control input {
   margin-top: 0.5rem;
-  border: 2px #000 solid;
+  border: 2px #eaeaea solid;
   height: 100rpx;
   padding-left: 20rpx;
   text-indent: 10rpx;
@@ -41,29 +48,30 @@ page{
   position: relative;
 }
 
-picker{
+picker {
   margin-top: 1rem;
   text-align: center;
 }
 
-picker view:nth-child(2){
+picker view:nth-child(2) {
   display: inline-flex;
   width: 80rpx;
   justify-content: center;
 }
-picker view:not(:nth-child(2)){
+
+picker view:not(:nth-child(2)) {
   display: inline-flex;
   width: 130rpx;
   height: 130rpx;
   border-radius: 10rpx;
   justify-content: center;
   align-items: center;
-  border:2px #000 solid;
+  border: 2px #eaeaea solid;
 }
 
-.form-control textarea{
+.form-control textarea {
   margin-top: 0.5rem;
-  border: 2px #000 solid;
+  border: 2px #eaeaea solid;
   font-size: 28rpx;
   padding-top: 10rpx;
   padding-left: 20rpx;
@@ -71,9 +79,9 @@ picker view:not(:nth-child(2)){
   position: relative;
 }
 
-.form-control input view{
+.form-control input view {
   position: absolute;
-  right:20rpx;
+  right: 20rpx;
   top: 0;
   line-height: 100rpx;
   color: #777;

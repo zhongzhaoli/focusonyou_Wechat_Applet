@@ -101,7 +101,7 @@ page {
   font-size: 32rpx;
 }
 
-.plan {
+/* .plan {
   width: 100%;
   height: 200rpx;
   border-radius: 20rpx;
@@ -124,7 +124,7 @@ page {
   display: flex;
   align-items: center;
   justify-content: center;
-}
+} */
 
 .header {
   display: flex;
@@ -145,7 +145,7 @@ page {
   font-weight: bold;
 }
 
-.plan_text {
+/* .plan_text {
   color: white;
   letter-spacing: 7rpx;
   font-size: 40rpx;
@@ -166,9 +166,9 @@ page {
   font-size: 25rpx;
   font-weight: 400;
   letter-spacing: 3rpx;
-}
+} */
 
-.bg1 {
+/* .bg1 {
   background-image: url('http://focus.yuntunwj.com/audio/dj1.jpg');
   background-size: cover;
 }
@@ -186,23 +186,7 @@ page {
 .bg4 {
   background-image: url('http://focus.yuntunwj.com/audio/dj4.jpg');
   background-size: cover;
-}
-
-.ju-center {
-  justify-content: center;
-}
-
-.ju-between{
-  justify-content: space-between;
-}
-
-.ali-center{
-  align-items: center;
-}
-
-.d-flex {
-  display: flex;
-}
+} */
 
 
 .plans{
@@ -228,4 +212,10 @@ page {
   color: #777;
   font-size: 25rpx;
   text-align: left;
+}
+.no_plan{
+  text-align: center;
+  color: #d3d3d3;
+  font-size:35rpx;
+  margin-top: 20rpx;
 }

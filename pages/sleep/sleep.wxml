@@ -1,0 +1,26 @@
+<!--index.wxml-->
+
+<loading wx:if="{{ loading }}">
+  加载中...
+</loading>
+
+<view class="my_sleep d-flex">
+  <view class="flex-1 text-center">
+    <view class="day_text">累计天数</view>
+    <view class="day_num">10</view>
+  </view>
+  <view class="flex-1 text-center">
+    <view class="day_text">连续天数</view>
+    <view class="day_num">10</view>
+  </view>
+  <view class="flex-1 text-center">
+    <view class="day_text">最长连续</view>
+    <view class="day_num">10</view>
+  </view>
+</view>
+<view class="p-3">
+  <view class="text text-center sleep_text">{{ text }}</view>
+  <view>
+    <image src=""></image>
+  </view>
+</view>

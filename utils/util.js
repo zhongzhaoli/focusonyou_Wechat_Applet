@@ -12,8 +12,8 @@ const formatTime = date => {
 const formatTimes = date => {
   const month = date.getMonth() + 1
   const day = date.getDate()
-  const hour = date.getHours()
-  const minute = date.getMinutes()
+  const hour = (date.getHours() < 10)? "0" + date.getHours() : date.getHours()
+  const minute = (date.getMinutes() < 10) ? "0" + date.getMinutes() : date.getMinutes()
   const second = date.getSeconds()
   const week = date.get
 

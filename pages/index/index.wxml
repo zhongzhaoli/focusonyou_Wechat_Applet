@@ -19,17 +19,19 @@
   </view>
 </view>
 
-<view class="plan_div" wx:if="{{ !login_bg }}">
-  <view class="plan bg2 " wx:if="{{ !plan.length }}" bindtap='redircts' data-href="input">
+<view class="plan_div {{ (!plan.length) ? 'd-flex ju-center ali-center flex-column' : '' }}" wx:if="{{ !login_bg }}">
+  <!-- <view class="plan bg2 " wx:if="{{ !plan.length }}" bindtap='redircts' data-href="input">
     <view class="mb no_message">
       <view>开始制定今天的计划</view>
     </view>
-  </view>
+  </view> -->
   <!-- <view class="plan {{ item.bg }}" wx:for="{{ plan }}" wx:key="idx">
     <view class="mb">
       <view class="plan_text">{{ item.text }}</view>
     </view>
   </view> -->
+  <view wx:if="{{ !plan.length }}" class="no_plan">今天还没有任何计划哦</view>
+  <view wx:if="{{ !plan.length }}" class="no_plan">快去定制计划吧</view>
   <view class="plans d-flex ju-between ali-center" wx:for="{{ plan }}" wx:key="idx">
     <view class="plan_text">
       <view class="plan_title">{{ item.text }}</view>
@@ -41,5 +43,5 @@
 <view style="height: 150rpx; width: 100%;"></view>
 <view class="d-flex index_bottom_btn_div fixed_bottom" wx:if="{{ !login_bg }}">
   <button class="btn-large btn-class2 flex-1 mr-1" bindtap='redircts' data-href="input">定制计划</button>
-  <button class="btn-large btn-class1 flex-1 ml-1">早睡打卡</button>
+  <button class="btn-large btn-class1 flex-1 ml-1" bindtap='redircts' data-href="sleep">早睡打卡</button>
 </view>

@@ -23,5 +23,5 @@
       <view>{{ time_min }}</view>
     </picker>
   </view>
-  <button bindtap='save_plan' class="save_plan">提交</button>
+  <button bindtap='save_plan' class="save_plan btn-normal btn-class3">提交</button>
 </view>

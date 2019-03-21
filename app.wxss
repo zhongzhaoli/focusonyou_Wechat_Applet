@@ -10,12 +10,40 @@
   box-sizing: border-box;
 }
 
+.ju-center {
+  justify-content: center;
+}
+
+.ju-between{
+  justify-content: space-between;
+}
+
+.ali-center{
+  align-items: center;
+}
+
+.flex-column{
+  flex-flow: column
+}
+
+.d-flex {
+  display: flex;
+}
+
+.text-center{
+  text-align: center;
+}
+
 .btn {
   margin: 0;
 }
 .btn-large{
   margin: 0;
   padding: 15rpx 0;
+}
+.btn-normal{
+  margin: 0;
+  padding: 7rpx 0;
 }
 
 .btn-class1 {
@@ -44,6 +72,12 @@
   letter-spacing: 4rpx;
 }
 
+.btn-class3{
+  background: #ffc107;
+  border: none;
+  color: white;
+}
+
 .flex-1 {
   flex: 1;
 }
@@ -54,4 +88,12 @@
 
 .ml-1 {
   margin-left: 0.5rem;
+}
+
+.p-4{
+  padding: 2rem;
+}
+
+.p-3{
+  padding: 1.5rem;
 }
