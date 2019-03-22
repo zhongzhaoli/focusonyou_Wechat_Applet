@@ -4,6 +4,7 @@ page {
 
 .my_sleep {
   padding: 20rpx 0;
+  height: 120rpx
 }
 
 .day_text {
@@ -33,14 +34,23 @@ page {
   background-size: 100% 100%;
   border-radius: 50%;
   border: 2px #eaeaea solid;
-  margin: 1rem auto;
+  margin: 2rem auto;
 }
 .sleep_time{
-  font-size: 50rpx;
+  font-size: 70rpx;
 }
 
 .fixed{
-  position: fixed;
-  bottom: 1rem;
-  width: calc(100% - 3rem);
+  position:fixed;
+  bottom:1rem;
+  width:calc(100% - 2rem);
+  left:1rem;
+}
+
+.sleep_div{
+  height: calc(100% - 120rpx - 40rpx - 120rpx - 1rem - 3rem - 1rem);
+}
+.ps{
+  font-size: 30rpx;
+  color: #d3d3d3;
 }

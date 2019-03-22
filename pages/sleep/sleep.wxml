@@ -7,21 +7,22 @@
 <view class="my_sleep d-flex">
   <view class="flex-1 text-center">
     <view class="day_text">累计天数</view>
-    <view class="day_num">10</view>
+    <view class="day_num">0</view>
   </view>
   <view class="flex-1 text-center">
     <view class="day_text">连续天数</view>
-    <view class="day_num">10</view>
+    <view class="day_num">0</view>
   </view>
   <view class="flex-1 text-center">
     <view class="day_text">最长连续</view>
-    <view class="day_num">10</view>
+    <view class="day_num">0</view>
   </view>
 </view>
-<view class="p-3">
+<view class="p-3 sleep_div d-flex ali-center ju-center flex-column">
   <view class="text text-center sleep_text">{{ text }}</view>
-  <view class="mt-2 text-center sleep_time">{{ time }}</view>
+  <view class="mt-3 text-center sleep_time">{{ time }}</view>
   <view class="sleep_view">
   </view>
-  <button class="btn-normal btn-class4 fixed">打卡</button>
+  <view class="ps">（ 打卡时间：20:00 ~ 11:00 ）</view>
 </view>
+<button class="btn btn-class4 fixed" disabled='{{ btn_type }}' bindtap='clock_fun'>{{ btn_text }}</button>
