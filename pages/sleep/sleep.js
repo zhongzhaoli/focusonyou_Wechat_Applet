@@ -15,12 +15,14 @@ Page({
       '我会一直喜欢你，直到我每天可以早睡早起',
       '早睡早起身体好，晚婚晚育颜值高'
     ],
-    text: '3213211',
+    text: '',
+    time: '',
   },
   onLoad: function(){
     let sj = parseInt(Math.random() * 4);
     this.setData({
-      text: this.data.text_arr[sj]
+      text: this.data.text_arr[sj],
+      time: util.formatTimes(new Date()).hour + " : " + util.formatTimes(new Date()).min
     })
   }
 })

@@ -20,7 +20,8 @@
 </view>
 <view class="p-3">
   <view class="text text-center sleep_text">{{ text }}</view>
-  <view>
-    <image src=""></image>
+  <view class="mt-2 text-center sleep_time">{{ time }}</view>
+  <view class="sleep_view">
   </view>
+  <button class="btn-normal btn-class4 fixed">打卡</button>
 </view>

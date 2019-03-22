@@ -26,3 +26,21 @@ page {
   line-height: 60rpx;
   letter-spacing: 5rpx;
 }
+.sleep_view{
+  width: 300rpx;
+  height: 300rpx;
+  background-image: url('http://focus.yuntunwj.com/audio/sleep.png');
+  background-size: 100% 100%;
+  border-radius: 50%;
+  border: 2px #eaeaea solid;
+  margin: 1rem auto;
+}
+.sleep_time{
+  font-size: 50rpx;
+}
+
+.fixed{
+  position: fixed;
+  bottom: 1rem;
+  width: calc(100% - 3rem);
+}
