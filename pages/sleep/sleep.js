@@ -17,16 +17,39 @@ Page({
     time: '',
     loading: false,
     btn_type: '',
-    btn_text: '打卡'
+    btn_text: '打卡',
+    sj: {},
   },
-  onLoad: function(){
+  onLoad: function() {
     let sj = parseInt(Math.random() * 3);
+    this.get_sj();
     this.setData({
       text: this.data.text_arr[sj],
       time: util.formatTimes(new Date()).hour + " : " + util.formatTimes(new Date()).min
     })
   },
-  clock_fun: function(){
+  get_sj: function() {
+    let that = this;
+    api.ajax({
+      url: '/sleep/' + wx.getStorageSync('user').openid,
+      method: 'GET',
+      data: {},
+      success: function(e) {
+        var btn_text = "打卡";
+        var btn_type;
+        if(!e.data.need_clock){
+          btn_text = "今天已打卡",
+          btn_type = "disabled"
+        }
+        that.setData({
+          sj: e.data,
+          btn_text: btn_text,
+          btn_type: btn_type
+        })
+      }
+    });
+  },
+  clock_fun: function() {
     let that = this;
     this.setData({
       loading: true
@@ -37,11 +60,11 @@ Page({
       data: {
         "user_id": wx.getStorageSync('user').openid,
       },
-      success: function(e){
+      success: function(e) {
         that.setData({
           loading: false
         })
-        if(e.data.status == 200){
+        if (e.data.status == 200) {
           wx.showToast({
             title: e.data.message,
             icon: 'succes',
@@ -52,8 +75,7 @@ Page({
             btn_type: 'disbaled',
             btn_text: '今天已打卡'
           })
-        }
-        else{
+        } else {
           wx.showToast({
             title: e.data.message,
             image: '/images/error.png',
