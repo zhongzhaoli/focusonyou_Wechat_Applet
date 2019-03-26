@@ -36,7 +36,7 @@ Page({
       data: {},
       success: function(e) {
         var btn_text = "打卡";
-        var btn_type;
+        var btn_type = "";
         if(!e.data.need_clock){
           btn_text = "今天已打卡",
           btn_type = "disabled"
